@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<div id="home">
+
+    <div class="default">
+        <div class="loading">
+            <span class="loader"></span>
+          </div> 
+    </div>
+   
+
+  <div class="sideBar text-white">
+
+    <div class="sideInner">
+     <div class="nav">
+      <a  id="search" onclick="displaying(1)">Search</a>
+      <a id="categories" onclick="displaying(2)">Categories</a>
+      <a id="area" onclick="displaying(3)">Area</a>
+      <a id="ingredients" onclick="displaying(4)">Ingredients</a>
+      <a id="contact" onclick="displaying(5)">Contact</a>
+     </div>
+
+     <div class="social  ">
+      <ul class="list-unstyled  hstack gap-3">
+          <li><i class="bi bi-facebook"></i></li>
+          <li><i class="bi bi-twitter"></i></li>
+          <li><i class="bi bi-globe"></i></li>
+      </ul>
+      <div class="rights ">
+          Copyright Â © 2019 All Rights Reserved.
+         </div>
+     </div>          
+    </div>
+
+    <div class="edge vstack justify-content-between align-items-center text-black py-4 px-2 fw-bold">
+      <img src="images/logo.png" alt="">
+      <a href="#"><i class="slide bi bi-justify fs-1 text-black" data-state="closed"></i></a>
+      <div class="links d-flex flex-column ">
+          <a href="#"><i class="bi bi-globe2 text-black"></i></a>
+          <a href="#"><i class="bi bi-share-fill text-black"></i></a>
+      </div>
+    </div>
+
+ </div>
+
+ 
+  <div class="container">
+    
+   
+ 
+   <div class="content">
+    
+    <div class="defaultContent container">
+        <div class="row row-cols-1 row-cols-lg-4 g-4" >
+       
+        </div>
+     
+        </div> 
+     
+     <!-- ************************************* search content -->
+     
+          <div class="searhPage container " id="searchPage">
+            
+             <div class="searcInputs d-flex justify-content-between gap-3 mb-5 w-75 mx-auto ">
+                 <input id="nameSearch" type="text" placeholder="Search by name" class="form-control bg-transparent">
+                 <input id="firstLetterSearch" type="text" placeholder="Search by first letter" class="form-control bg-transparent">
+             </div>
+     
+            <div class="searchPageContent container">
+     
+                 <div class="row row-cols-1 row-cols-lg-4 g-4">
+     
+             
+                  </div>  
+             </div>
+      
+         </div>   
+     
+     <!-- ************************************ categories content -->
+      <div class="categoriesContent container ">
+        <div class="category">
+            <div class="loading">
+                <span class="loader"></span>
+              </div> 
+        </div>
+     
+        <div class="row row-cols-1 row-cols-lg-4 g-4">
+             
+        </div>
+       
+          
+     </div>
+      
+     <!-- ************************************* area page -->
+     
+      <div class="areaPage container ">
+        <div class="area">
+            <div class="loading">
+                <span class="loader"></span>
+              </div> 
+        </div>
+        <div class="row row-cols-1 row-cols-lg-4 g-4">
+             
+        </div>
+         
+        
+     </div>  
+     <!-- ****************************************  ingredients Page-->
+     
+      <div class="ingredientsPage container ">
+     
+        <div class="ingredient">
+            <div class="loading">
+                <span class="loader"></span>
+              </div> 
+        </div>
+
+         <div class="row row-cols-1 row-cols-lg-4 g-4">
+            <div class="col text-white text-center">
+            
+            </div>
+         </div>
+         
+        
+     </div>  
+     
+     <!-- ***************************************** contact page -->
+      <div class="contactPage " >
+         <div class=" container d-flex justify-content-center align-items-center">
+             <form action="" class="text-center w-75 mx-auto ">
+                 <div class="row row-cols-1 row-cols-lg-2 gy-4">
+                     <div class="col vstack gap-4 ">
+                         <div class="position-relative">
+                             <input type="text" id="name"  class="form-control " placeholder="Enter your name">
+                             <p class="invalid-tooltip">Don't leave this field empty & don't start with space</p>
+                         </div>
+                         <div class="position-relative">
+                             <input type="text" id="phone" class="form-control" placeholder="Enter your phone">
+                             <p class="invalid-tooltip">invalid phone number (11 digit)</p>
+                         </div>
+                        
+                        <div class="position-relative">
+                         <input type="text" id="password" class="form-control" placeholder="Enter your password">
+                         <p class="invalid-tooltip">Invalid password (more than 8 characters)</p>
+                        </div>
+                     </div>
+         
+                     <div class="col vstack gap-4">
+                         <div class="position-relative">
+                             <input type="text" id="mail" class="form-control" placeholder="Enter your email">
+                             <p class="invalid-tooltip">invalid email (name@example.xxx)</p>
+                         </div>
+                         <div class="position-relative">
+                             <input type="number" id="age" class="form-control " placeholder="Enter your age">
+                             <p class="invalid-tooltip"> invalid age (age larger than 6 & smaller than 100)</p>
+                         </div>
+                         <div class="position-relative">                 
+                         <input type="text" id="repassword" class="form-control " placeholder="Repasssword">
+                         <p class="invalid-tooltip">non identical password</p>
+                         </div>
+                     </div>
+                 </div>
+                 <input type="submit" id="submit" class="btn btn-outline-danger mt-5">
+             </form>
+         
+              </div>
+     </div>
+     
+     <!-- **************************************** details page -->
+     <div class="detailsPage container text-white">
+        <div class="details">
+            <div class="loading">
+                <span class="loader"></span>
+              </div> 
+        </div>
+         <div class="row g-5">
+        
+         </div>
+     </div>
+     <!-- **************************************  category meals -->
+     <div class="categoryMeals container ">
+
+        <div class="categoryFilter">
+            <div class="loading">
+                <span class="loader"></span>
+              </div> 
+        </div>
+     
+        <div class="row row-cols-1 row-cols-lg-4 g-4">
+             
+        </div>
+       
+          
+     </div>
+        
+     
+     <!-- ************************************* area meals -->
+     <div class="areaMeals container ">
+        <div class="areaFilter">
+            <div class="loading">
+                <span class="loader"></span>
+              </div> 
+        </div>
+     
+        <div class="row row-cols-1 row-cols-lg-4 g-4">
+             
+        </div>
+       
+          
+     </div>
+     
+     
+     <!-- *********************************** ingredient meals -->
+     
+     <div class="ingredientMeals container ">
+        <div class="ingredientFilter ">
+            <div class="loading">
+                <span class="loader"></span>
+              </div> 
+        </div>
+        <div class="row row-cols-1 row-cols-lg-4 g-4">
+             
+        </div>
+       
+          
+     </div>
+     
+     
+     
+     
+     
+     
+   </div>
+
+
+  </div>
+</div> 
+
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

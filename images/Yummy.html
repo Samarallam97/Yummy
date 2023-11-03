@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://ahmed58usama2001.github.io/Yummy/ -->
+<html lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Yummy_files/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./Yummy_files/all.min.css">
+    <link rel="stylesheet" href="./Yummy_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Yummy_files/style.css">
+    <title>Yummy</title>
+</head>
+
+<body cz-shortcut-listen="true" style="overflow: visible;">
+
+    <div class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center" style="display: none;">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+
+    <div class="side-nav-menu min-vh-100 position-fixed d-flex top-0" style="left: -256.562px;">
+        <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li onclick="showSearchInputs(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 300px;">Search</li>
+                    <li onclick="getCategories(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 300px;">Categories</li>
+                    <li onclick="getArea(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 300px;">Area</li>
+                    <li onclick="getIngredients(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 300px;">Ingredients</li>
+                    <li onclick="showContacts(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 300px;">Contact Us</li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer">
+                    <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img class="logo" src="./Yummy_files/logo.png" alt="" srcset="">
+            <i class="fa-solid open-close-icon fa-2x fa-align-justify"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container w-75" id="searchContainer"></div>
+
+    <div class="min-vh-100 position-relative">
+        <div class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center" style="display: none;">
+            <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+        
+    
+        <div class="container">
+            <div class="row py-5 g-4 " id="rowData">
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;American&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>American</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;British&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>British</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Canadian&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Canadian</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Chinese&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Chinese</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Croatian&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Croatian</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Dutch&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Dutch</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Egyptian&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Egyptian</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Filipino&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Filipino</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;French&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>French</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Greek&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Greek</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Indian&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Indian</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Irish&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Irish</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Italian&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Italian</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Jamaican&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Jamaican</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Japanese&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Japanese</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Kenyan&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Kenyan</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Malaysian&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Malaysian</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Mexican&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Mexican</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Moroccan&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Moroccan</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Polish&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Polish</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Portuguese&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Portuguese</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Russian&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Russian</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Spanish&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Spanish</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Thai&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Thai</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Tunisian&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Tunisian</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Turkish&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Turkish</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Unknown&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Unknown</h3>
+                </div>
+        </div>
+        
+        <div class="col-md-3">
+                <div onclick="getAreaMeals(&#39;Vietnamese&#39;)" class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Vietnamese</h3>
+                </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+
+    
+
+    
+
+
+
+    <script src="./Yummy_files/jquery-3.6.0.min.js.تنزيل"></script>
+    <script src="./Yummy_files/bootstrap.bundle.min.js.تنزيل"></script>
+    <script src="./Yummy_files/index.js.تنزيل"></script>
+
+
+</body></html>
